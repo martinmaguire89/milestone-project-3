@@ -1,0 +1,8 @@
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('https://media.contentapi.ea.com/content/dam/ufc/images/2017/10/easufc3-overview-championshipfighters.jpg.adapt.crop191x100.628p.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
