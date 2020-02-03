@@ -22,7 +22,7 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="{{ url_for('login') }}">log in/sign up</a>
       </li>
       
     </ul>
@@ -32,7 +32,8 @@
     </form>
   </div>
 </nav>
-
+{% block content %}
+{% endblock %}
 <!-- Full Page Image Header with Vertically Centered Content -->
 <header class="masthead">
   <div class="container h-100">
@@ -44,6 +45,7 @@
     </div>
   </div>
 </header>
+<br>
 <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
       <div class="card h-100">
