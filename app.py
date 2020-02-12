@@ -5,8 +5,14 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 
+app.config["MONGO_DBNAME"] = 'task_manager'
+app.config["MONGO_URI"] = 'mongodb+srv://martin-maguire:Noucamp99@myfirstcluster-doje8.mongodb.net/greatest_fighters?retryWrites=true&w=majority'
+
+mongo = PyMongo(app)
+
 
 @app.route('/')
+
 def index():
     return render_template("index.html")
 
