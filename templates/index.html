@@ -13,6 +13,19 @@
 </header>
 <!-- Full Page Image Header with Vertically Centered Content -->
 <br>
+
+{% for category in categories %}
+        {{category.url}}
+        {{category.first_name}}
+        {{category.second_name}}
+        {{category.dob}}
+        {{category.weight}}
+        {{category.hometown}}
+        {{category.fight_record}}
+        {{category.bio}}
+        {{category.comment}}
+{% endfor %}
+<!---
 <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
       <div class="card h-100">
@@ -59,4 +72,5 @@
       </div>
     </div>
 </div>
+-->
 {% endblock %}
