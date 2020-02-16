@@ -29,6 +29,10 @@ def login():
 def signup():
     return render_template("signup.html")
 
+@app.route('/addfighter')
+def addfighter():
+    return render_template("addfighter.html")
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
