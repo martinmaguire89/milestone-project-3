@@ -1,4 +1,8 @@
-
+.navbar-dark .navbar-brand {
+    color: #fff;
+    font-family: 'Akronim', cursive;
+    font-size: xx-large;
+}
 .masthead {
   height: 100vh;
   min-height: 500px;
