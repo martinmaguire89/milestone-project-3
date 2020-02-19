@@ -17,8 +17,8 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/fighters')
 def fighters():
-    return render_template("fighters.html", 
-        categories=mongo.db.categories.find())
+    return render_template("fighters.html",
+     categories=mongo.db.categories.find())
 
 
 @app.route('/login')
@@ -32,7 +32,14 @@ def signup():
 
 @app.route('/addfighter')
 def addfighter():
-    return render_template("addfighter.html")
+    return render_template('addfighter.html',
+       categories=mongo.db.categories.find())
+
+@app.route('/insert_fighter', methods=['post'])
+def insert_fighter():
+    categories = mongo.db.categories
+    categories.insert_one(request.form.to_dict())
+    return redirect(url_for('fighters'))
 
 
 if __name__ == '__main__':
