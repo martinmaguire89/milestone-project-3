@@ -15,9 +15,10 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/index')
-def index():
-    return render_template("index.html", categories=mongo.db.categories.find())
+@app.route('/fighters')
+def fighters():
+    return render_template("fighters.html", 
+        categories=mongo.db.categories.find())
 
 
 @app.route('/login')
