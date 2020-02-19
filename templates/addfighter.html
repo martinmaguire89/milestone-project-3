@@ -1,54 +1,55 @@
 {% extends 'base.html' %}
 {% block content %}
-<container>
- <div class="row">
-    <form class="col s12">
-      <div class="row">
-         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
+<div class="container">
+  
+
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6 fas fa-user">
+                <label for="inputEmail4">First Name</label>
+                <input type="text" class="form-control" id="First Name" placeholder="First Name">
+            </div>
+            <div class="form-group col-md-6 fas fa-user">
+                <label for="inputPassword4">Second Name</label>
+                <input type="text" class="form-control" id="Second Name" placeholder="Second Name">
+            </div>
         </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
+        <div class="form-row">
+            <div class="form-group col-md-6 fas fa-calendar-alt">
+                <label for="inputEmail4">Date of Birth</label>
+                <input type="text" class="form-control" id="Date of Birth" placeholder="00 Jan 00">
+            </div>
+            <div class="form-group col-md-6 fas fa-weight">
+                <label for="inputPassword4">Weight</label>
+                <input type="text" class="form-control" id="Weight" placeholder="000lbs">
+            </div>
         </div>
-      </div>
-       <div class="row">
-         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">Date of Birth</label>
+        <div class="form-row">
+            <div class="form-group col-md-6 fas fa-home">
+                <label for="inputEmail4">Hometown</label>
+                <input type="text" class="form-control" id="Hometown" placeholder="Hometown">
+            </div>
+            <div class="form-group col-md-6 fas fa-file-alt">
+                <label for="inputPassword4">Fight Record</label>
+                <input type="text" class="form-control" id="Fight Record" placeholder="00-00-00">
+            </div>
         </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Weight</label>
+        <div class="form-row">
+            <div class="form-group col-12 fas fa-info">
+                <label for="inputAddress">Bio</label>
+                <input type="text" class="form-control" id="bio" placeholder="Bio">
+            </div>
+            <div class="form-group col-12 fas fa-comment-alt">
+                <label for="inputAddress2">Comment</label>
+                <input type="text" class="form-control" id="comment" placeholder="comment">
+            </div>
+            <div class="form-group col-12 fas fa-link">
+                <label for="inputAddress2">URL</label>
+                <input type="text" class="form-control" id="URL" placeholder="Image address here">
+            </div>
         </div>
-      </div>
-       <div class="row">
-         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">Hometown</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" placeholder="00-00-00">
-          <label for="last_name">Fight record</label>
-        </div>
-      </div>
-       <div class="row">
-         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">Bio</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">comment</label>
-        </div>
-      </div>
-       <div class="row">
-         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">URL</label>
-        </div>
+    
     </form>
-  </div>
-</container>
+        <button type="submit" class="btn btn-primary">Add Fighter</button>
+</div>
 {% endblock %}
