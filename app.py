@@ -26,10 +26,22 @@ def fighters():
     return render_template('login.html')
 
 
-@app.route('/login')
+@app.route('/login', methods=['POST'])
 def login():
-    return render_template("login.html")
 
+    return render_template('login.html')
+
+    users = mongo.db.users
+    login_user = users.find_one({'name': request.form['username']})
+
+    if login_user:
+        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
+            session['username'] = request.form['username']
+            return redirect(url_for('addfighter.html'))
+
+            return 'invalid username/password combination'
+
+    
 
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
@@ -43,7 +55,7 @@ def signup():
                                     bcrypt.gensalt())
             users.insert({'name': request.form['username'], 'password': hashpass})
             session['username'] = request.form['username']
-            return render_template('addfighter.html')
+            return render_template('login.html')
 
         return 'That username already exists'
 
