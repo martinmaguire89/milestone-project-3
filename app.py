@@ -19,29 +19,26 @@ mongo = PyMongo(app)
 @app.route('/fighters')
 def fighters():
     return render_template("fighters.html",
-     categories=mongo.db.categories.find())
+                           categories=mongo.db.categories.find())
     if 'username' in session:
         return 'You are logged in as' + session ['username']
 
     return render_template('login.html')
 
 
-@app.route('/login', methods=['POST'])
+@app.route('/login', methods=['POST', 'GET'])
 def login():
+    if request.method == 'POST':
+        users = mongo.db.users
+        login_user = users.find_one({'name': request.form['username']})
+        if login_user:
+            if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
+                session['username'] = request.form['username']
+                return redirect(url_for('addfighter.html'))
+
+                return 'invalid username/password combination'
 
     return render_template('login.html')
-
-    users = mongo.db.users
-    login_user = users.find_one({'name': request.form['username']})
-
-    if login_user:
-        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
-            session['username'] = request.form['username']
-            return redirect(url_for('addfighter.html'))
-
-            return 'invalid username/password combination'
-
-    
 
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
