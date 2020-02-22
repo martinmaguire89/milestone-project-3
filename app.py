@@ -30,7 +30,7 @@ def fighters():
 def login():
     if request.method == 'POST':
         users = mongo.db.users
-        login_user = users.find_one({'name': request.form['username']})
+        login_user = users.find_one({'name': request.form('username')})
         if login_user:
             if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
                 session['username'] = request.form['username']
@@ -39,36 +39,35 @@ def login():
                 return 'invalid username/password combination'
 
     return render_template('login.html')
+  
 
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
     if request.method == 'POST':
         users = mongo.db.users
-
-        existing_user = users.find_one({'name': request.form['username']})
-
+        existing_user = users.find_one({'name': request.form.get('name')})
         if existing_user is None:
             hashpass = bcrypt.hashpw(request.form['password'].encode('utf - 8'),
-                                    bcrypt.gensalt())
-            users.insert({'name': request.form['username'], 'password': hashpass})
-            session['username'] = request.form['username']
-            return render_template('login.html')
+                                     bcrypt.gensalt())
+            users.insert({'name': request.form['name'], 'password': hashpass})
+            session['name'] = request.form['name']
+            return redirect(url_for('addfighter.html'))
 
         return 'That username already exists'
-
     return render_template('signup.html')
-
-
+    
 @app.route('/addfighter')
 def addfighter():
     return render_template('addfighter.html',
-       categories=mongo.db.categories.find())
+                           categories=mongo.db.categories.find())
+
 
 @app.route('/insert_fighter', methods=['post'])
 def insert_fighter():
     categories = mongo.db.categories
     categories.insert_one(request.form.to_dict())
     return redirect(url_for('fighters'))
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
