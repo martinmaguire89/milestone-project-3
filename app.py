@@ -55,7 +55,8 @@ def signup():
 
         return 'That username already exists'
     return render_template('signup.html')
-    
+
+
 @app.route('/addfighter')
 def addfighter():
     return render_template('addfighter.html',
@@ -67,6 +68,11 @@ def insert_fighter():
     categories = mongo.db.categories
     categories.insert_one(request.form.to_dict())
     return redirect(url_for('fighters'))
+
+
+@app.route('/moreinfo')
+def moreinfo():
+    return render_template("moreinfo.html")
 
 
 if __name__ == '__main__':
