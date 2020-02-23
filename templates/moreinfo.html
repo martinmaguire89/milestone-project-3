@@ -1,23 +1,16 @@
 {% extends 'base.html' %}
 {% block content %} 
+
 {% for category in categories %}
-<div class="row">
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="{{category.url}}" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">{{category.first_name}} {{category.second_name}}</a>
-          </h4>
-          <p class="card-text"> {{category.dob}}
+        {{category.url}}
+        {{category.first_name}}
+        {{category.second_name}}
+        {{category.dob}}
         {{category.weight}}
         {{category.hometown}}
         {{category.fight_record}}
-        {{category.bio}}</p>
-        </div>
-      </div>
-    </div>
-</div>
+        {{category.bio}}
+        {{category.comment}}
 
 {% endfor %}
 {% endblock %}

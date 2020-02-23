@@ -21,7 +21,7 @@ def fighters():
     return render_template("fighters.html",
                            categories=mongo.db.categories.find())
     if 'username' in session:
-        return 'You are logged in as' + session ['username']
+        return 'You are logged in as' + session['username']
 
     return render_template('login.html')
 
@@ -39,7 +39,7 @@ def login():
                 return 'invalid username/password combination'
 
     return render_template('login.html')
-  
+
 
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
