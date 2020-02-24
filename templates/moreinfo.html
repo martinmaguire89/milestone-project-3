@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% block content %} 
 
-{% for category in categories %}
-<div class="div">
+
+<div class="container">
+    <div class="row">
+    {% for category in categories %}
         <h1> more info</h1>
         {{category.bio}}
-        
+    </div>  
+    {% endfor %}  
 </div>
 
-{% endfor %}
+
 {% endblock %}
