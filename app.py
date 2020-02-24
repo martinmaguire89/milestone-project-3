@@ -19,7 +19,8 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/fighters')
 def fighters():
-    return render_template("fighters.html")
+    return render_template("fighters.html",
+                           categories=mongo.db.categories.find())
 
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -62,8 +63,8 @@ def addfighter():
                            categories=mongo.db.categories.find())
 
 
-@app.route('/insert_fighter', methods=['post'])
-def insert_fighter():
+@app.route('/addfigther', methods=['post'])
+def add_fighter():
     categories = mongo.db.categories
     categories.insert_one(request.form.to_dict())
     return redirect(url_for('fighters'))
@@ -71,10 +72,10 @@ def insert_fighter():
 
 @app.route('/moreinfo')
 def moreinfo():
-    return render_template("moreinfo.html")
-
+    return render_template("moreinfo.html",
+                           categories=mongo.db.categories.find())
 
 if __name__ == '__main__':
-    app.run(host=os.environ.get('IP'),
+    app.run(host=os.environ.get('IP', '0.0.0.0'),
             port=int(os.environ.get('PORT', '5000')),
             debug=True)

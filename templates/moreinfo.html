@@ -2,15 +2,11 @@
 {% block content %} 
 
 {% for category in categories %}
-        {{category.url}}
-        {{category.first_name}}
-        {{category.second_name}}
-        {{category.dob}}
-        {{category.weight}}
-        {{category.hometown}}
-        {{category.fight_record}}
+<div class="div">
+        <h1> more info</h1>
         {{category.bio}}
-        {{category.comment}}
+        
+</div>
 
 {% endfor %}
 {% endblock %}
