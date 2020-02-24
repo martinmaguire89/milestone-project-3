@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'greatest_fighters'
 app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+app.config['SECRET_KEY'] = 'verysecretkey'
 
 mongo = PyMongo(app)
 
@@ -18,25 +19,22 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/fighters')
 def fighters():
-    return render_template("fighters.html",
-                           categories=mongo.db.categories.find())
-    if 'username' in session:
-        return 'You are logged in as' + session['username']
-
-    return render_template('login.html')
+    return render_template("fighters.html")
 
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
         users = mongo.db.users
-        login_user = users.find_one({'name': request.form('username')})
-        if login_user:
-            if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
-                session['username'] = request.form['username']
-                return redirect(url_for('addfighter.html'))
+        login_user = users.find_one({'name': request.form('name')})
 
-                return 'invalid username/password combination'
+        if login_user:
+            if bcrypt.hashpw(request.form['password'].encode('utf-8'),
+                             login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
+                session['name'] = request.form['name']
+            return redirect(url_for('addfighter'))
+
+        return 'invalid username/password combination'
 
     return render_template('login.html')
 
@@ -46,12 +44,13 @@ def signup():
     if request.method == 'POST':
         users = mongo.db.users
         existing_user = users.find_one({'name': request.form.get('name')})
+
         if existing_user is None:
             hashpass = bcrypt.hashpw(request.form['password'].encode('utf - 8'),
                                      bcrypt.gensalt())
-            users.insert({'name': request.form['name'], 'password': hashpass})
+            users.insert_one({'name': request.form['name'], 'password': hashpass})
             session['name'] = request.form['name']
-            return redirect(url_for('addfighter.html'))
+            return redirect(url_for('addfighter'))
 
         return 'That username already exists'
     return render_template('signup.html')
