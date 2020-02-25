@@ -3,8 +3,8 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 
 <div class="login-page">
-  <div class="form">
-    <form class="login-form" action="{{url_for('login')}}" method='POST, GET'>
+  <div class="form" method='POST'>
+    <form class="login-form" action="{{url_for('login')}}" method='POST'>
       <input type="text" name ='name' placeholder="username"/>
       <input type="password" name="password" placeholder="password"/>
       <button>login</button>

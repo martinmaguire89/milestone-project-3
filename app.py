@@ -27,11 +27,11 @@ def fighters():
 def login():
     if request.method == 'POST':
         users = mongo.db.users
-        login_user = users.find_one({'name': request.form('name')})
+        login_user = users.find_one({'name': request.form.get('name')})
 
         if login_user:
-            if bcrypt.hashpw(request.form['password'].encode('utf-8'),
-                             login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
+            if bcrypt.hashpw(request.form.get('password').encode('utf-8'),
+                             login_user['password']) == login_user['password']:
                 session['name'] = request.form['name']
                 return redirect(url_for('addfighter'))
 
