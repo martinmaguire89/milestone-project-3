@@ -3,13 +3,16 @@
 
 
 <div class="container">
-    <div class="row">
+  <div class="row">
     {% for category in categories %}
-        <h1> more info</h1>
-        {{category.bio}}
-    </div>  
-    {% endfor %}  
+        <div class="col-sm">
+            <h1> more info</h1>
+            <P>{{category.bio}}</P>
+        </div>
+     <a class="btn btn-primary" href="{{url_for('edit_fighter', categories_id=category._id)}}" role="button">edit fighter</a>
+    </div>
+    {% endfor %}
 </div>
 
-
 {% endblock %}
+

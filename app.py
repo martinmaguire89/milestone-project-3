@@ -33,10 +33,9 @@ def login():
             if bcrypt.hashpw(request.form['password'].encode('utf-8'),
                              login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
                 session['name'] = request.form['name']
-            return redirect(url_for('addfighter'))
+                return redirect(url_for('addfighter'))
 
         return 'invalid username/password combination'
-
     return render_template('login.html')
 
 
@@ -63,17 +62,27 @@ def addfighter():
                            categories=mongo.db.categories.find())
 
 
-@app.route('/addfigther', methods=['post'])
+@app.route('/addfighter', methods=['POST'])
 def add_fighter():
     categories = mongo.db.categories
     categories.insert_one(request.form.to_dict())
     return redirect(url_for('fighters'))
 
 
+@app.route('/editfighter/<categories_id>')
+def edit_fighter(categories_id):
+    the_categories = mongo.db.tasks.find_one({"_id": ObjectId(categories_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('editfighter.html', category=the_categories,
+                           categories=all_categories)
+
+
 @app.route('/moreinfo')
-def moreinfo():
+def more_info():
     return render_template("moreinfo.html",
                            categories=mongo.db.categories.find())
+
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),
