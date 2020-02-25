@@ -71,10 +71,32 @@ def add_fighter():
 
 @app.route('/editfighter/<categories_id>')
 def edit_fighter(categories_id):
-    the_categories = mongo.db.tasks.find_one({"_id": ObjectId(categories_id)})
+    the_categories = mongo.db.categories.find_one({"_id": ObjectId(categories_id)})
     all_categories = mongo.db.categories.find()
     return render_template('editfighter.html', category=the_categories,
                            categories=all_categories)
+
+
+@app.route('/update_fighter/<categories_id>', methods=["POST"])
+def update_fighter(categories_id):
+    categories = mongo.db.categories
+    categories.update({'_id': ObjectId(categories_id)},
+                      {
+                        'first_name': request.form.get('first_name'),
+                        'second_name': request.form.get('second_name'),
+                        'dob': request.form.get('dob'),
+                        'weight': request.form.get('weight'),
+                        'hometown': request.form.get('hometown'),
+                        'fight_record': request.form.get('fight_record'),
+                        'bio': request.form.get('bio'),
+                        'comment': request.form.get('comment'),
+                        })
+    return redirect(url_for('fighters'))
+
+@app.route('/delete_fighter/<categories_id>')
+def delete_fighter(categories_id):
+    mongo.db.categories.remove({'_id': ObjectId(categories_id)})
+    return redirect(url_for('fighters'))
 
 
 @app.route('/moreinfo')

@@ -8,52 +8,59 @@
         
                     <form action="{{url_for('edit_fighter', categories_id=category._id)}}" method="POST">
                         <div class="form-row">
+                        {% for category in categories %} 
+                        
+
                             <div class="form-group col-md-6 fas fa-user">
                                 <label for="first_name">First Name</label>
                                 <input type="text" class="form-control" id="First Name" name="first_name" placeholder="First Name" value="{{category.first_name}}">
                             </div>
                             <div class="form-group col-md-6 fas fa-user">
                                 <label for="second_name">Second Name</label>
-                                <input type="text" class="form-control" id="Second Name" name="second_name" placeholder="Second Name">
+                                <input type="text" class="form-control" id="Second Name" name="second_name" placeholder="Second Name" value="{{category.second_name}}">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 fas fa-calendar-alt">
                                 <label for="dob">Date of Birth</label>
-                                <input type="text" class="form-control" id="Date of Birth" name="dob"placeholder="00 Jan 00">
+                                <input type="text" class="form-control" id="Date of Birth" name="dob"placeholder="00 Jan 00" value="{{category.dob}}">
                             </div>
                             <div class="form-group col-md-6 fas fa-weight">
                                 <label for="weight">Weight</label>
-                                <input type="text" class="form-control" id="Weight" name="weight" placeholder="000lbs">
+                                <input type="text" class="form-control" id="Weight" name="weight" placeholder="000lbs"value="{{category.weight}}">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 fas fa-home">
                                 <label for="hometown">Hometown</label>
-                                <input type="text" class="form-control" id="Hometown" name="hometown" placeholder="Hometown">
+                                <input type="text" class="form-control" id="Hometown" name="hometown" placeholder="Hometown" value="{{category.hometown}}">
                             </div>
                             <div class="form-group col-md-6 fas fa-file-alt">
                                 <label for="fight_record">Fight Record</label>
-                                <input type="text" class="form-control" id="Fight Record" name="fight_record" placeholder="00-00-00">
+                                <input type="text" class="form-control" id="Fight Record" name="fight_record" placeholder="00-00-00" value="{{category.fight_record}}">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-12 fas fa-info">
                                 <label for="bio">Bio</label>
-                                <input type="text" class="form-control" id="bio" name="bio" placeholder="Bio">
+                                <input type="text" class="form-control" id="bio" name="bio" placeholder="Bio" value="{{category.bio}}">
                             </div>
                             <div class="form-group col-12 fas fa-comment-alt">
                                 <label for="comment">Comment</label>
-                                <input type="text" class="form-control" id="comment" name="comment" placeholder="comment">
+                                <input type="text" class="form-control" id="comment" name="comment" placeholder="comment" value="{{category.comment}}">
                             </div>
                             <div class="form-group col-12 fas fa-link">
                                 <label for="url">URL</label>
-                                <input type="text" class="form-control" id="URL" name="url" placeholder="Image address here">
+                                <input type="text" class="form-control" id="URL" name="url" placeholder="Image address here" value="{{category.url}}">
                             </div>
+                            
                         </div>
-                            <button type="submit" class="btn btn-primary" name='{{url_for("add_fighter")}}'>Add Fighter</button>
+                            <a class="btn btn-primary" href="{{url_for('update_fighter', categories_id=category._id)}}" role="button">Update Fighter</a>
+                            <a class="btn btn-primary" href="{{url_for('delete_fighter', categories_id=category._id)}}" role="button">delete Fighter</a>
                     </form>
+                     
                 </div>
         </div>
+        {% endfor %} 
 </div>
 {% endblock %}
