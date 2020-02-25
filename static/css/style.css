@@ -48,3 +48,9 @@ social-links {
     line-height: 60px;
     background-color: #212529;
 };
+
+.card-img-top {
+width: 100%;
+height: 40vh;
+object-fit: cover;
+}
