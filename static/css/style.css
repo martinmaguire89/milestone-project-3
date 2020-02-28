@@ -25,17 +25,18 @@ social-links {
     font-size: 13px;
     line-height: 7px;
     text-align: center;
-    color: #fcfce4;
-    background: #d3ad98;
+    color: #fffafa;
+    background: #343a40;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
-    border: 1px solid #fbf9e7;
+    border: 1px solid #fffafa;
 }
 
 .social-links li a i:hover {
-    background: #ffc107;
+    background: #fffafa;
+    color: #343a40
 }
 
 #footer {
@@ -45,4 +46,15 @@ social-links {
     margin-right: auto;
     margin-left: auto;
     background-color: #343a40;
+    position: absolute;
+ }
+ 
+ #footer-details{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    color: snow;
  }
