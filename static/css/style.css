@@ -47,6 +47,7 @@ social-links {
     margin-left: auto;
     background-color: #343a40;
     position: absolute;
+    flex-shrink: none;
  }
  
  #footer-details{
