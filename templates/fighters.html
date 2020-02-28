@@ -18,26 +18,30 @@
     <div class="row">
     {% for category in categories %}
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card h-100">
-            <a href="{{url_for('more_info')}}"><img class="card-img-top" src="{{category.url}}" alt=""></a>
-            <div class="card-body">
-            <h4 class="card-title">
-                <a href="{{url_for('more_info')}}">{{category.first_name}} {{category.second_name}}</a>
-            </h4>
-            <p class="card-text"> 
-            {{category.dob}}
-            </p>
-            <p class="card-text"> 
-            {{category.weight}}
-            </p>
-            <p class="card-text"> 
-            {{category.hometown}}
-            </p>
-            <p class="card-text"> 
-            {{category.fight_record}}
-            </p>
+            <div class="card h-100">
+                <a href="{{url_for('more_info')}}"><img class="card-img-top" src="{{category.url}}" alt=""></a>
+                <div class="card-body">
+                <h4 class="card-title">
+                    <a href="{{url_for('more_info')}}">{{category.first_name}} {{category.second_name}}</a>
+                </h4>
+                <p class="card-text"> 
+                {{category.dob}}
+                </p>
+                <p class="card-text"> 
+                {{category.weight}}
+                </p>
+                <p class="card-text"> 
+                {{category.hometown}}
+                </p>
+                <p class="card-text"> 
+                {{category.fight_record}}
+                </p>
+                </div>
             </div>
         </div>
+        {% endfor %}
+    </div>
+    
 </div>
-{% endfor %}
+
 {% endblock %}
