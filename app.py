@@ -71,7 +71,6 @@ def add_fighter():
 
 @app.route('/editfighter/<categories_id>')
 def edit_fighter(categories_id):
-    print("*** TEST ****")
     the_categories = mongo.db.categories.find_one({"_id": ObjectId(categories_id)})
     all_categories = mongo.db.categories.find()
     return render_template('editfighter.html', category=the_categories,
@@ -80,8 +79,6 @@ def edit_fighter(categories_id):
 
 @app.route('/update_fighter/<categories_id>', methods=["POST", 'GET'])
 def update_fighter(categories_id):
-    print("*** TEST 2 ****")
-    print(request.form.get('first_name'))
     categories = mongo.db.categories
     categories.update({'_id': ObjectId(categories_id)},
                       {

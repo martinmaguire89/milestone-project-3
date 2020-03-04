@@ -48,6 +48,7 @@ social-links {
     background-color: #343a40;
     position: absolute;
     flex-shrink: none;
+    min-height: 22vh;
  }
  
  #footer-details{
