@@ -99,10 +99,12 @@ def delete_fighter(categories_id):
     return redirect(url_for('fighters'))
 
 
-@app.route('/more_info')
-def more_info():
-    return render_template('moreinfo.html',
-                           categories=mongo.db.categories.find())
+@app.route('/more_info/<categories_id>')
+def more_info(categories_id):
+    the_categories = mongo.db.categories.find_one({"_id": ObjectId(categories_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('moreinfo.html', category=the_categories,
+                           categories=all_categories)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),
