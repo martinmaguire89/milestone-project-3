@@ -19,6 +19,9 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/fighters')
 def fighters():
+    if 'username' in session:
+        return 'You are logged in as ' + session['username']
+        
     return render_template("fighters.html",
                            categories=mongo.db.categories.find())
 
