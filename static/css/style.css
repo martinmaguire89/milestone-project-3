@@ -69,3 +69,12 @@ social-links {
 .btn-primary:hover{
   background-color: darkorange ;
 }
+
+#more_info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 15px;
+    text-align: center;
+}
