@@ -67,14 +67,13 @@ social-links {
     border-color: #ffffff;
 }
 .btn-primary:hover{
-  background-color: darkorange ;
+  background-color: #ff8c00 ;
 }
-
-#more_info {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 15px;
+h1,
+h2,
+h3,
+h4, 
+h5{
+    font-weight: 400;
     text-align: center;
 }
