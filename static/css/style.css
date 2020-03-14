@@ -39,7 +39,7 @@ social-links {
     color: #343a40
 }
 
-#footer {
+#sticky-footer {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -49,16 +49,6 @@ social-links {
     position: absolute;
     flex-shrink: none;
     min-height: 22vh;
- }
- 
- #footer-details{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    color: snow;
  }
 
 .btn-primary {
