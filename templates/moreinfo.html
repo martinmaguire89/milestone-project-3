@@ -5,11 +5,13 @@
 <div class="container" >
 
   <div class="row"id="{{url_for('update_fighter', categories_id=category._id)}}">
-    
-        <div class="col-sm">
-            <h1> more info</h1>
+    <div class="col-sm-7">
+    <a href="#"><img class="card-img-top" src="{{category.url}}" alt=""></a>
+    </div>
+        <div class="col-sm-5">
+            <h1>Biography</h1>
             <P >{{category.bio}}</P>
-            <a class="btn btn-primary" href="{{url_for('edit_fighter', categories_id=category._id)}}" role="button">edit fighter</a>
+            <a class="btn btn-primary text-center" href="{{url_for('edit_fighter', categories_id=category._id)}}" role="button">edit fighter</a>
         </div>
         
     </div>

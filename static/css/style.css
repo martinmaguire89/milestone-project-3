@@ -60,3 +60,12 @@ social-links {
     margin-left: -15px;
     color: snow;
  }
+
+.btn-primary {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #ffffff;
+}
+.btn-primary:hover{
+  background-color:#red ;
+}

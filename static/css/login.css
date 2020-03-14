@@ -76,21 +76,21 @@
   padding: 0;
   font-size: 36px;
   font-weight: 300;
-  color: #1a1a1a;
+  color: #343a40;
 }
 .container .info span {
   color: #4d4d4d;
   font-size: 12px;
 }
 .container .info span a {
-  color: #000000;
+  color: #343a40;
   text-decoration: none;
 }
 .container .info span .fa {
-  color: #EF3B3A;
+  color: #343a40;
 }
 .body {
-  background: black; /* fallback for old browsers */
+  background: #343a40; /* fallback for old browsers */
   background: -webkit-linear-gradient(right, #76b852, #8DC26F);
   background: -moz-linear-gradient(right, #76b852, #8DC26F);
   background: -o-linear-gradient(right, #76b852, #8DC26F);
