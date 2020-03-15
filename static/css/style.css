@@ -12,6 +12,15 @@
   background-repeat: no-repeat;
 }
 
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 15px;
+}
+
 social-links {
     padding-bottom: 15px;
 }

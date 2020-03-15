@@ -2,7 +2,7 @@
 {% block content %}
 
 <h3> Edit Fighter</h3>
-<div class="container">
+<div class="container" id="edit_figther">
         <div class="row">
                 <div class="col">
         
@@ -11,45 +11,45 @@
                        
                         
 
-                            <div class="form-group col-md-6 fas fa-user">
+                            <div class="form-group col-md-6">
                                 <label for="first_name">First Name</label>
                                 <input type="text" class="form-control" id="First Name" name="first_name" placeholder="First Name" value="{{category.first_name}}">
                             </div>
-                            <div class="form-group col-md-6 fas fa-user">
+                            <div class="form-group col-md-6">
                                 <label for="second_name">Second Name</label>
                                 <input type="text" class="form-control" id="Second Name" name="second_name" placeholder="Second Name" value="{{category.second_name}}">
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-6 fas fa-calendar-alt">
-                                <label for="dob">Date of Birth</label>
-                                <input type="text" class="form-control" id="Date of Birth" name="dob"placeholder="00 Jan 00" value="{{category.dob}}">
+                            <div class="md-form">
+                                <input placeholder="Selected date" type="text" id="date-picker-example" class="form-control datepicker">
+                                <label for="date-picker-example">Try me...</label>
                             </div>
-                            <div class="form-group col-md-6 fas fa-weight">
+                            <div class="form-group col-md-6">
                                 <label for="weight">Weight</label>
                                 <input type="text" class="form-control" id="Weight" name="weight" placeholder="000lbs"value="{{category.weight}}">
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-6 fas fa-home">
+                            <div class="form-row col-md-6">
                                 <label for="hometown">Hometown</label>
                                 <input type="text" class="form-control" id="Hometown" name="hometown" placeholder="Hometown" value="{{category.hometown}}">
                             </div>
-                            <div class="form-group col-md-6 fas fa-file-alt">
+                            <div class="form-row col-md-6">
                                 <label for="fight_record">Fight Record</label>
                                 <input type="text" class="form-control" id="Fight Record" name="fight_record" placeholder="00-00-00" value="{{category.fight_record}}">
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-12 fas fa-info">
+                            <div class="form-group col-12">
                                 <label for="bio">Bio</label>
                                 <input type="text" class="form-control" id="bio" name="bio" placeholder="Bio" value="{{category.bio}}">
                             </div>
-                            <div class="form-group col-12 fas fa-comment-alt">
+                            <div class="form-group col-12">
                                 <label for="comment">Comment</label>
                                 <input type="text" class="form-control" id="comment" name="comment" placeholder="comment" value="{{category.comment}}">
                             </div>
-                            <div class="form-group col-12 fas fa-link">
+                            <div class="form-group col-12">
                                 <label for="url">URL</label>
                                 <input type="text" class="form-control" id="URL" name="url" placeholder="Image address here" value="{{category.url}}">
                             </div>
