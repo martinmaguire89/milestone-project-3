@@ -102,7 +102,7 @@ After any change on my code, I would push my code to the Heroku app to check if 
 * Credit goes to the tutos for there hlep wiht my log in probelms and my mentor rahul for everything.
 ### Content
 * The log in paage html was taken form a login.signup page from [colorlib](https://colorlib.com/).
-* the login/sign up usinf flask + python was foun on [prettyprinted](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ) Youtube page.
+* the login/sign up usinf flask + python was found on [prettyprinted](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ) Youtube page.
 
 ### Media
 
