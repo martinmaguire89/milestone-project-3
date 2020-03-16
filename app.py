@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 def fighters():
     if 'username' in session:
         return 'You are logged in as ' + session['username']
-     
+
     return render_template("fighters.html",
                            categories=mongo.db.categories.find())
 
@@ -96,9 +96,10 @@ def update_fighter(categories_id):
                         })
     return redirect(url_for('fighters'))
 
+
 @app.route('/delete_fighter/<categories_id>')
 def delete_fighter(categories_id):
-    mongo.db.categories.remove({'_id': ObjectId(categories_id)})
+    the_categories = mongo.db.categories.remove({'_id': ObjectId(categories_id)})
     return redirect(url_for('fighters'))
 
 
@@ -108,6 +109,7 @@ def more_info(categories_id):
     all_categories = mongo.db.categories.find()
     return render_template('moreinfo.html', category=the_categories,
                            categories=all_categories)
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),

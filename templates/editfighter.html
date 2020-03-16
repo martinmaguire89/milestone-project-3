@@ -50,7 +50,7 @@
                             </div>
                             <div class="text-centre">
                             <button type="submit" class="btn btn-primary" name="{{url_for('update_fighter', categories_id=category._id)}}">Update Fighter</button>
-                            <button type="submit" class="btn btn-primary" name="{{url_for('delete_fighter', categories_id=category._id)}}">Delete Fighter</button>
+                            <a href="{{url_for('delete_fighter', categories_id=category._id)}}" class="btn btn-primary">Delete Fighter</a>
                         
                         </div>    
                     </form>

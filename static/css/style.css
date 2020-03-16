@@ -95,7 +95,7 @@ h5{
     padding: 1.25rem;
     text-align: center;
 }
-a {
+a link {
     color: #343a40;
     text-decoration: none;
     background-color: transparent;
@@ -122,5 +122,11 @@ a {
 
 .text-centre {
     text-align: center;
-    padding: 5-px;
+    margin: 15px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #343a40;
 }
