@@ -8,8 +8,6 @@
         
                     <form action="{{url_for('update_fighter', categories_id=category._id)}}" method="POST">
                         <div class="form-row">
-                       
-                        
 
                             <div class="form-group col-md-6">
                                 <label for="first_name">First Name</label>
@@ -22,7 +20,7 @@
                         </div>
                         <div class="form-row">
                             <div class="md-form">
-                                <input placeholder="Selected date" type="text" id="date-picker-example" class="form-control datepicker">
+                                <input placeholder="Selected date" type="text" id="date-picker" class="form-control datepicker">
                                 <label for="date-picker-example">Try me...</label>
                             </div>
                             <div class="form-group col-md-6">
@@ -67,4 +65,12 @@
         </div>
        
 </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript">
+       $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
 {% endblock %}

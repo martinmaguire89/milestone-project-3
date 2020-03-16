@@ -56,17 +56,18 @@ social-links {
     margin-left: auto;
     background-color: #343a40;
     position: absolute;
-    flex-shrink: none;
-    min-height: 22vh;
+    min-height: 33vh;
  }
 
 .btn-primary {
     color: #fff;
     background-color: #343a40;
-    border-color: #ffffff;
+    border-color: #343a40;
 }
-.btn-primary:hover{
-  background-color: #ff8c00 ;
+.btn-primary:hover {
+    color: #fff;
+    background-color: #1a1d20;
+    border-color: #1a1d20;
 }
 h1,
 h2,
