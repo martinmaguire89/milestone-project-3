@@ -1,7 +1,7 @@
 # Milestone-project-3
 # Pound For Pound
 
-My 3rd milestone project is a full-stack site website that allows users to manage a common dataset about a particular domain. My project is basically a page for all fight fans and enthusiasts around the world to come together and put there favourite fighter in the website to be classed as one of the greatest ever. I went for a easy layout for all people using the site. For purpsoes of this site you can use Username martinmaguire89 and password - password to log in to show the page for adding your own figther. 
+My 3rd milestone project is a full-stack site website that allows users to manage a common dataset about a particular domain. My project is a page for all fight fans and enthusiasts around the world to come together and put there favourite fighter in the website to be classed as one of the greatest ever. I wanted to use mma fighters for this project as I feel a lot of current fighter stat pages look quite outdated and do very little to look appealing. I wanted to provide a website to show stats of fighters, but also look good so a fan will return.  For purpsoes of this site you can use Username martinmaguire89 and password - password to log in to show the page for adding your own figther. 
 
 It can be viewed on heroku 
 
