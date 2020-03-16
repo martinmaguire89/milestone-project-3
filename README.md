@@ -64,11 +64,11 @@ The more info page provides the user with a small biography that another user ha
 * I would like to add a comment/forum page for all users to leave a comment about who and why they think certain fighters are the greatest. This would strike up a lively debate between all users on the website.
 * A upvote button on each card so each user can cvote for there faviourite fighter, this will also show off the more poplur ones.
 *  would like to upgrade my log in/sign up system. Currently you need to log in to show the add fighter page however entering the in page in the URL will take you to this page without any security. Also i would like to make it that your cannot update or delete unless your are logged in. My tutor Rahul has provides me with he solution for this [digitaloccean]( https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login). However due to time constraints I was not able to update this before course submission date but will make a priority after submission. 
+
 ## Testing
 * Used Google Chrome developer tools to test website responsiveness across multiple devices such as Tablets, Mobiles and laptop. This allowed me to see any issue's with sizing in different version control.
 *  I used different web browsers such as Microsoft edge and Firefox to test how my page would run on different web browsers. I then used each responsive tool in each browser to again test my version control to see if it would still work effectively or if I would encounter any problems. 
 * Used [W3c validator](https://validator.w3.org/) to validate both HTML and CSS. I copied my code and pasted it into the validator to check for errors and warnings.
-* I tested each button when adding the JavaScript for each of them. Once one worked, I tested if it was still working on smaller screens and if there were any delay when clicked. Once I sorted this, I used the same JavaScript for each button to change the centre of the map to a specific location when clicked.
 * I used [cssautoprefixer](https://autoprefixer.github.io/) to help get the appropriate vendor prefixes needed for my code to work in all browsers.
 * Used [W3c validator](https://validator.w3.org/) to validate both HTML and CSS. I copied my code and pasted it into the validator to check for errors and warnings.
 *  I used [codebeautify](https://codebeautify.org/python-formatter-beautifier) to help with the correct Indentation of my python code
