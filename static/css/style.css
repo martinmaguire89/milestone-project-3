@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .navbar-dark .navbar-brand {
     color: #fff;
     font-family: 'Akronim', cursive;
@@ -86,7 +88,8 @@ h5{
 }
 .card-body {
     -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+    -webkit-box-flex: 1;
+            flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem;
     text-align: center;
@@ -100,16 +103,20 @@ a {
 .card {
     position: relative;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-direction: column;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    box-shadow: 2px 1px 13px 4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 2px 1px 13px 4px rgba(0,0,0,0.75);
+            box-shadow: 2px 1px 13px 4px rgba(0,0,0,0.75);
 }
 
 .text-centre {
