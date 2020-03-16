@@ -7,58 +7,54 @@
                 <div class="col">
         
                     <form action="{{url_for('update_fighter', categories_id=category._id)}}" method="POST">
-                        <div class="form-row">
+                        <div class="form-group">
 
-                            <div class="form-group col-md-6">
+                            <div class="form-row col-md-6 fa">
                                 <label for="first_name">First Name</label>
                                 <input type="text" class="form-control" id="First Name" name="first_name" placeholder="First Name" value="{{category.first_name}}">
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-row col-md-6 fa">
                                 <label for="second_name">Second Name</label>
                                 <input type="text" class="form-control" id="Second Name" name="second_name" placeholder="Second Name" value="{{category.second_name}}">
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="md-form">
-                                <input placeholder="Selected date" type="text" id="date-picker" class="form-control datepicker">
-                                <label for="date-picker-example">Try me...</label>
+                            <div class="form-row col-md-6 fa">
+                                <label for="date-picker-example">D.O.B</label>
+                                <input placeholder="Selected date" type="text" id="date-picker" class="form-control datepicker" value="{{category.dob}}">
                             </div>
-                            <div class="form-group col-md-6">
+                            <div class="form-row col-md-6 fa">
                                 <label for="weight">Weight</label>
                                 <input type="text" class="form-control" id="Weight" name="weight" placeholder="000lbs"value="{{category.weight}}">
                             </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-row col-md-6">
+                        <div class="form-group">
+                            <div class="form-row col-md-6 fa">
                                 <label for="hometown">Hometown</label>
                                 <input type="text" class="form-control" id="Hometown" name="hometown" placeholder="Hometown" value="{{category.hometown}}">
                             </div>
-                            <div class="form-row col-md-6">
+                            <div class="form-row col-md-6 fa">
                                 <label for="fight_record">Fight Record</label>
                                 <input type="text" class="form-control" id="Fight Record" name="fight_record" placeholder="00-00-00" value="{{category.fight_record}}">
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-12">
+                            <div class="form-row col-12 fa">
                                 <label for="bio">Bio</label>
                                 <input type="text" class="form-control" id="bio" name="bio" placeholder="Bio" value="{{category.bio}}">
                             </div>
-                            <div class="form-group col-12">
+                            <div class="form-row col-12 fa">
                                 <label for="comment">Comment</label>
                                 <input type="text" class="form-control" id="comment" name="comment" placeholder="comment" value="{{category.comment}}">
                             </div>
-                            <div class="form-group col-12">
+                            <div class="form-row col-12 fa">
                                 <label for="url">URL</label>
                                 <input type="text" class="form-control" id="URL" name="url" placeholder="Image address here" value="{{category.url}}">
                             </div>
-                            
-                        </div>
-                            
+                            <div class="text-centre">
                             <button type="submit" class="btn btn-primary" name="{{url_for('update_fighter', categories_id=category._id)}}">Update Fighter</button>
                             <button type="submit" class="btn btn-primary" name="{{url_for('delete_fighter', categories_id=category._id)}}">Delete Fighter</button>
                             <!--- <a type="submit" value="Submit" class="btn btn-primary" href="{{url_for('update_fighter', categories_id=category._id)}}" role="button">Update Fighter</a>
                             <a type="submit" value="Submit" class="btn btn-primary" href="{{url_for('delete_fighter', categories_id=category._id)}}" role="button">delete Fighter</a>
                             <button type="submit" class="btn btn-primary" name='{{url_for("add_fighter")}}'>Add Fighter</button> --->
+                        </div>    
                     </form>
                      
                 </div>

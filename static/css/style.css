@@ -111,3 +111,8 @@ a {
     border-radius: .25rem;
     box-shadow: 2px 1px 13px 4px rgba(0,0,0,0.75);
 }
+
+.text-centre {
+    text-align: center;
+    padding: 5-px;
+}
