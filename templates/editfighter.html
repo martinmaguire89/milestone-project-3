@@ -23,9 +23,10 @@
                                 <input placeholder="Selected date" type="text" id="date-picker" class="form-control datepicker" value="{{category.dob}}">
                             </div>
                             <div class="form-row col-md-6 fas">
-                                <label for="weight">Weight</label>
-                                <input type="text" class="form-control" id="Weight" name="weight" placeholder="000lbs"value="{{category.weight}}">
+                                <label for="fight_record">Date</label>
+                                <input type="date" class="form-control" id="dob" name="dob" placeholder="dob" value="{{category.dob}}">
                             </div>
+                        </div>
                         <div class="form-group">
                             <div class="form-row col-md-6 fas">
                                 <label for="hometown">Hometown</label>
@@ -39,10 +40,6 @@
                             <div class="form-row col-12 fas">
                                 <label for="bio">Bio</label>
                                 <input type="text" class="form-control" id="bio" name="bio" placeholder="Bio" value="{{category.bio}}">
-                            </div>
-                            <div class="form-row col-12 fas">
-                                <label for="comment">Comment</label>
-                                <input type="text" class="form-control" id="comment" name="comment" placeholder="comment" value="{{category.comment}}">
                             </div>
                             <div class="form-row col-12 fas">
                                 <label for="url">URL</label>
@@ -60,11 +57,5 @@
        
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script type="text/javascript">
-       $(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
-</script>
+
 {% endblock %}

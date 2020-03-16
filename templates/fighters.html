@@ -22,7 +22,7 @@
                 <a href="{{url_for('more_info', categories_id=category._id)}}"><img class="card-img-top" src="{{category.url}}" alt=""></a>
                 <div class="card-body">
                 <h4 class="card-title">
-                    <p><a href="{{url_for('more_info', categories_id=category._id)}}">{{category.first_name}} {{category.second_name}}</a></p>
+                    <a href="{{url_for('more_info', categories_id=category._id)}}">{{category.first_name}} {{category.second_name}}</a>
                 </h4>
                 <p class="card-text"> 
                 D.O.B {{category.dob}}
