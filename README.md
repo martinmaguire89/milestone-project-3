@@ -74,8 +74,9 @@ The more info page provides the user with a small biography that another user ha
 *  I used [codebeautify](https://codebeautify.org/python-formatter-beautifier) to help with the correct Indentation of my python code
 
 ## Issues when Testing
-* The biggest issue I faced and still not found a solution for is when you select a fighter to find out more info on or update it will give you every fighter on the database not just the one you need. I was offered a tutor one to one but unfortunately not before my completion date.
+* when I clicked on more info it showed every fighter available biography and not the one, I selected. Thankfully to the tutor support they were able to show me that I had placed the more info into a for loop using the categories and the  end for. This resulted in all fighters being called and not the specific one. Once removed this sorted the issue.
 * There where a number of issues with the logging and signing in portions of the page. unfortunately thanks to the help of the tutors you can now log in and sign up for the website. 
+* When a new fighter was uploaded due to different sizes of photos used on small screens it sometimes pushed the fighter image outside of the card section. To rectify this I set the height at 100% and the width to 360px so that they stayed within the card on all screen sizes. 
 
 ## Deployment
 Heroku
@@ -85,20 +86,23 @@ My project has also been deployed via the master branch and hosted on Heroku. He
 The following process was undertaken to succesfully deploy the project on the Heroku:
 
 New app creted on Heroku
-After creating my env.py file (along with the .gitignore file), I added the MONGO URI..
-I installed Heroku via my command line interface, using install npm install heroku on my git hub terminal.
+* After creating my env.py file (along with the .gitignore file), I added the MONGO URI..
+* I installed Heroku via my command line interface, using install npm install heroku on my git hub terminal.
 Afterwards type heroku login, which would redirect me to another tab where I would sign in to heroku as proceed once more in the terminal.
 The next step was to initialise a git repo and add my Heroku remote repo command.
 However, as per the requirements, before I can push my code to the Heroku app, I installed:
-A requirements.txt file is needed to run the installed dependencies, so to create and commit this file, the following command was used: $ sudo pip3 freeze --local > requirements.txt (and also used to update the file if any libraries were added).
-A Procfile is needed to direct the Heroku app to the file that it needs to run. So I used the command $ echo web: python > Procfile in the terminal to install the file. This was followed by a simple command in the terminal to run the web process: $ heroku ps:scale web=1.
-Finally, to deploy I would use the $ git push heroku master to deploy my code on the Heroku app.
+* A requirements.txt file is needed to run the installed dependencies, so to create and commit this file, the following command was used: $ sudo pip3 freeze --local > requirements.txt (and also used to update the file if any libraries were added).
+* A Procfile is needed to direct the Heroku app to the file that it needs to run. So I used the command $ echo web: python > Procfile in the terminal to install the file. 
+* This was followed by a simple command in the terminal to run the web process: $ heroku ps:scale web=1.
+* Finally, to deploy I would use the $ git push heroku master to deploy my code on the Heroku app.
 After any change on my code, I would push my code to the Heroku app to check if it was functioning. There were some slight issues with the MONGO URI and SECRET KEY but it was resolved quickly.
 
 
 ## Credits
-* Thank you to the mentors who helped me with everything. 
+* Credit goes to the tutos for there hlep wiht my log in probelms and my mentor rahul for everything.
 ### Content
+* The log in paage html was taken form a login.signup page from[colorlib](https://colorlib.com/).
+* the login/sign up usinf flask + python was foun on [prettyprinted] (https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ) Youtube page.
 
 ### Media
 
