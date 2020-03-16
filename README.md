@@ -26,13 +26,13 @@ The Websit
 *	CSS
 *	[Google Fonts](https://fonts.google.com/) - Used to style the fonts of the website.
 *	[jQuery](https://jquery.com/) - To make certain features function on the page.
-*	[git](https://github.com/)- Used as a repository
-*	[Gitpod](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki)- Used for a development and testing area.
+*	[git](https://github.com/) - Used as a repository
+*	[Gitpod](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki) - Used for a development and testing area.
 *	[Bootstrap](https://www.bootstrapcdn.com/) - Bootstrap framework to create responsive design.
-*	[fontawesome](https://fontawesome.com/) for social media icons.
-* Flask
+*	[fontawesome](https://fontawesome.com/) - for social media icons.
+* [Flask]
 * [MongoDB](https://www.mongodb.com/) backend database used to store the information on the fighters
-* [Python](https://www.python.org/)
+* [Python](https://www.python.org/)- 
 
 
 ## Features
