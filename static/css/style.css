@@ -78,6 +78,7 @@ h4,
 h5{
     font-weight: 400;
     text-align: center;
+    color: #343a40;
 }
 .card-img-top {
     -ms-flex-negative: 0;
