@@ -7,15 +7,22 @@ It can be viewed on heroku
 
 ## UX
 ### Who is the target audience?
-*	This website is for people who are big fight fans from around the world and all different organisation of MMA.
+*	This website is for people who are big fight fans from around the world of all different organisation of MMA. It also appeals to fans of boxing, wrestling, judo, or even taekwondo. It It’s designed for people who want to express an opinion about which fighters the feel have ruled over there sports for decades. 
 
 
 ### How does this attract our target audience?
-The Websit
+* The name of the site is pound for pound. Pound for pound is a ranking used in combat sports. As these fighters do not compete directly, judging the best fighter pound for pound is subjective, and ratings vary. They may be based on a range of criteria including to determine who would win if all those ranked were the same size. This site would bring all these fighters together for fans to look at there stats and bio to put there case for there favourite fighter being the best ever. 
+Using the large picture attract the fan straight away with 5 of the most recognisable fighters in MMA. The colours used in the website are similar to the colour of the octagon used in MMA which will stir up notions of the fighters n the octagon. 
+
+
 ## User Stories
-*	As a user, I want the initial page to be eye catching.
+*	As a user, I want the initial page to be eye catching
 *	As a user, I want it to be easy to navigate.
 *	As a user, I want to have an easy way to get further information on fighters and what makes them so special.
+* As a User, I want to be met with a visually appealing and easy to read layout of cards sections for each fighter.
+*	As a User, I want to be able to register/sign-up to add my own fighter to the website for other people to see and read about. 
+* As a User, I want to be able to edit my own fighter and delete if I no longer wish to shcase my desired fighter. 
+
 
 ## Wireframe
 * Link to my [balsamiq wireframe](https://github.com/martinmaguire89/milestone-project-3/blob/master/milestone%20project-3.pdf)
@@ -33,6 +40,7 @@ The Websit
 * [Flask]
 * [MongoDB](https://www.mongodb.com/) backend database used to store the information on the fighters
 * [Python](https://www.python.org/)- 
+* [Heroku](https://dashboard.heroku.com/auth/heroku/callback?code=61fc81a2-ba86-42ec-ac96-a904a0153b77)- A cloud platform as a service enabling deployment for this CRUD application.
 
 
 ## Features
