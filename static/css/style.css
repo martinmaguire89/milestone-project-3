@@ -20,8 +20,7 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    padding: 15px;
-    margin-top: 24px;
+    padding: 27px;
     margin-bottom: 30px;
 }
 
@@ -92,12 +91,12 @@ h5{
 .card-body {
     -ms-flex: 1 1 auto;
     -webkit-box-flex: 1;
-            flex: 1 1 auto;
+    flex: 1 1 auto;
     min-height: 1px;
     padding: 1.25rem;
     text-align: center;
 }
-a link {
+a {
     color: #343a40;
     text-decoration: none;
     background-color: transparent;

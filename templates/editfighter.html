@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3> Edit Fighter</h3>
+
 <div class="container" id="edit_figther">
         <div class="row">
                 <div class="col">
-        
+                <h3> Edit Fighter</h3>
                     <form action="{{url_for('update_fighter', categories_id=category._id)}}" method="POST">
                         <div class="form-group">
 
